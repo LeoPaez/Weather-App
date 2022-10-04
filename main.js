@@ -2,6 +2,9 @@ window.addEventListener("load", () => {
     let lon 
     let lat
 
+    const cont = document.getElementById("contenedor")
+    const popUp = document.querySelector(".pop-up")
+
     const tempValor = document.getElementById("temp-valor")
     const tempDesc = document.getElementById("temp-desc")
 
@@ -11,8 +14,12 @@ window.addEventListener("load", () => {
 
     const vientoVelocidad = document.getElementById("viento-velocidad")
 
+    cont.classList.add("off")
+
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition( posicion => {
+            popUp.classList.add("off")
+            cont.classList.remove("off")
             lon = posicion.coords.longitude
             lat = posicion.coords.latitude
 

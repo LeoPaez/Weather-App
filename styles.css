@@ -33,7 +33,7 @@ body {
     padding-top: 20%;
     width: 240px;
     height: 200px;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 #caja1 {
@@ -55,4 +55,17 @@ body {
 #caja3 {
     background-color: #00a9e2;
     color: azure;
+}
+
+.pop-up {
+    background-color: #23233b;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+.pop-up__text {
+    color: #e1ecf7;
+}
+.off {
+    display: none;
+    visibility: hidden;
 }
