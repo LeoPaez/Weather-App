@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: "RobotoMed";
+    font-family: "RobotoMed", sans-serif;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@ body {
     position: absolute;
     top: 86px;
     right: 110px;
-    font-family: "RobotoReg";
+    font-family: "RobotoReg", sans-serif;
 }
 #caja3 {
     background-color: #00a9e2;
