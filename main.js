@@ -56,36 +56,35 @@ window.addEventListener("load", () => {
                     switch(data.weather[0].main) {
                         case "Thunderstorm":
                             iconAnim.src = "img/animated/thunder.svg"
-                            console.log("Tormenta")
+                            console.log("Tormenta");
                             break;
                         case "Drizzle":
                             iconAnim.src = "img/animated/rainy-2.svg"
-                            console.log("Llovizna")
+                            console.log("Llovizna");
                             break;
                         case "Rain":
                             iconAnim.src = "img/animated/rainy-7.svg"
-                            console.log("Lluvia")
+                            console.log("Lluvia");
                             break;
                         case "Snow":
                             iconAnim.src = "img/animated/snowy-6.svg"
-                            console.log("Nieve")
+                            console.log("Nieve");
                             break;
                         case "Clear":
                             iconAnim.src = "img/animated/day.svg"
-                            console.log("Limpio")
+                            console.log("Limpio");
                             break;
                         case "Atmosphere":
                             iconAnim.src = "img/animated/weather.svg"
-                            console.log("Atmosfera")
+                            console.log("Atmosfera");
                             break;
                         case "Clouds":
                             iconAnim.src = "img/animated/cloudy-day-1.svg"
-                            console.log("Nubes")
+                            console.log("Nubes");
                             break;
                         default: 
                             iconAnim.src = "img/animated/cloudy-day-1.svg"
-                            console.log("por defecto")
-                            break;
+                            console.log("por defecto");
                     }
 
                 })
