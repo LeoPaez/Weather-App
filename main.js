@@ -43,7 +43,8 @@ window.addEventListener("load", () => {
                     ubicacion.textContent = data.name
                     pais.textContent = data.sys.country
 
-                    vientoVelocidad.textContent = `${data.wind.speed} m/s`
+                    viento = data.wind.speed * 3.6
+                    vientoVelocidad.textContent = `${viento} km/h`
                     
                     // para iconos estaticos
                     // console.log(data.weather[0].icon);
