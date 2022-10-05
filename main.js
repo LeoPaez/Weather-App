@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
                 .then(response => {return response.json() })
                 .then(data => {
                     console.log(data);
-                    let temp = Math.floor(data.main.temp)
+                    let temp = Math.round(data.main.temp)
                     tempValor.textContent = `${temp} °C`
                     console.log(data.weather[0].description);
                     let desc = data.weather[0].description
