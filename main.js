@@ -33,8 +33,9 @@ window.addEventListener("load", () => {
 
             fetch(url)
                 .then(response => {return response.json() })
-                .then( data => {
-                    let temp = Math.round(data.main.temp)
+                .then(data => {
+                    console.log(data);
+                    let temp = Math.floor(data.main.temp)
                     tempValor.textContent = `${temp} °C`
                     console.log(data.weather[0].description);
                     let desc = data.weather[0].description
@@ -52,41 +53,75 @@ window.addEventListener("load", () => {
                     // const urlIcon = `https://openweathermap.org/img/wn/${iconCode}.png`
 
                     // para iconos animados
-                    console.log(data.weather[0].main);
-                    switch(data.weather[0].main) {
-                        case "Thunderstorm":
-                            iconAnim.src = "img/animated/thunder.svg"
-                            console.log("Tormenta");
-                            break;
-                        case "Drizzle":
-                            iconAnim.src = "img/animated/rainy-2.svg"
-                            console.log("Llovizna");
-                            break;
-                        case "Rain":
-                            iconAnim.src = "img/animated/rainy-7.svg"
-                            console.log("Lluvia");
-                            break;
-                        case "Snow":
-                            iconAnim.src = "img/animated/snowy-6.svg"
-                            console.log("Nieve");
-                            break;
-                        case "Clear":
-                            iconAnim.src = "img/animated/day.svg"
-                            console.log("Limpio");
-                            break;
-                        case "Atmosphere":
-                            iconAnim.src = "img/animated/weather.svg"
-                            console.log("Atmosfera");
-                            break;
-                        case "Clouds":
-                            iconAnim.src = "img/animated/cloudy-day-1.svg"
-                            console.log("Nubes");
-                            break;
-                        default: 
-                            iconAnim.src = "img/animated/cloudy-day-1.svg"
-                            console.log("por defecto");
+                    if(data.weather[0].icon.includes("d")) {
+                        switch(data.weather[0].main) {
+                            case "Thunderstorm":
+                                iconAnim.src = "img/animated/thunder.svg"
+                                console.log("Tormenta");
+                                break;
+                            case "Drizzle":
+                                iconAnim.src = "img/animated/rainy-2.svg"
+                                console.log("Llovizna");
+                                break;
+                            case "Rain":
+                                iconAnim.src = "img/animated/rainy-7.svg"
+                                console.log("Lluvia");
+                                break;
+                            case "Snow":
+                                iconAnim.src = "img/animated/snowy-3.svg"
+                                console.log("Nieve");
+                                break;
+                            case "Clear":
+                                iconAnim.src = "img/animated/day.svg"
+                                console.log("Limpio");
+                                break;
+                            case "Atmosphere":
+                                iconAnim.src = "img/animated/weather.svg"
+                                console.log("Atmosfera");
+                                break;
+                            case "Clouds":
+                                iconAnim.src = "img/animated/cloudy-day-1.svg"
+                                console.log("Nubes");
+                                break;
+                            default: 
+                                iconAnim.src = "img/animated/cloudy-day-1.svg"
+                                console.log("por defecto");
+                        }
+                    } else {
+                        switch(data.weather[0].main) {
+                            case "Thunderstorm":
+                                iconAnim.src = "img/animated/thunder.svg"
+                                console.log("Tormenta");
+                                break;
+                            case "Drizzle":
+                                iconAnim.src = "img/animated/rainy-4.svg"
+                                console.log("Llovizna");
+                                break;
+                            case "Rain":
+                                iconAnim.src = "img/animated/rainy-7.svg"
+                                console.log("Lluvia");
+                                break;
+                            case "Snow":
+                                iconAnim.src = "img/animated/snowy-6.svg"
+                                console.log("Nieve");
+                                break;
+                            case "Clear":
+                                iconAnim.src = "img/animated/night.svg"
+                                console.log("Limpio");
+                                break;
+                            case "Atmosphere":
+                                iconAnim.src = "img/animated/weather.svg"
+                                console.log("Atmosfera");
+                                break;
+                            case "Clouds":
+                                iconAnim.src = "img/animated/cloudy-night-4.svg"
+                                console.log("Nubes");
+                                break;
+                            default: 
+                                iconAnim.src = "img/animated/cloudy-night-4.svg"
+                                console.log("por defecto");
+                        }
                     }
-
                 })
                 .catch(error => {
                     console.log(error);
