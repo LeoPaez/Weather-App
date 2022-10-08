@@ -64,7 +64,7 @@ window.addEventListener("load", () => {
                                 console.log("Llovizna");
                                 break;
                             case "Rain":
-                                iconAnim.src = "img/animated/rainy-7.svg"
+                                iconAnim.src = "img/animated/rainy-5.svg"
                                 console.log("Lluvia");
                                 break;
                             case "Snow":
@@ -98,7 +98,7 @@ window.addEventListener("load", () => {
                                 console.log("Llovizna");
                                 break;
                             case "Rain":
-                                iconAnim.src = "img/animated/rainy-7.svg"
+                                iconAnim.src = "img/animated/rainy-5.svg"
                                 console.log("Lluvia");
                                 break;
                             case "Snow":
